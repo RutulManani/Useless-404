@@ -1,0 +1,125 @@
+body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffebee;
+            text-align: center;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+ h1 {
+            font-size: 3rem;
+            color: #e91e63;
+        }
+
+        .maze-container {
+            margin: 2rem auto;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            background-color: #fff;
+            border: 3px solid #333;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><rect width="300" height="300" fill="white"/><rect x="0" y="0" width="300" height="5" fill="black"/><rect x="0" y="295" width="300" height="5" fill="black"/><rect x="0" y="0" width="5" height="300" fill="black"/><rect x="295" y="0" width="5" height="300" fill="black"/></svg>');
+        }
+
+        #player {
+            width: 20px;
+            height: 20px;
+            background-color: #4CAF50;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            border-radius: 50%;
+            transition: all 0.2s;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        #exit {
+            width: 20px;
+            height: 20px;
+            background-color: #FF5722;
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            border-radius: 50%;
+            animation: pulse 1s infinite alternate;
+        }
+
+        .wall {
+            position: absolute;
+            background-color: #333;
+        }
+
+        .coin {
+            width: 10px;
+            height: 10px;
+            background-color: gold;
+            position: absolute;
+            border-radius: 50%;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .runaway-btn {
+            padding: 1rem 2rem;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.1s;
+            position: relative;
+            margin: 1rem;
+        }
+
+        .options {
+            margin-top: 2rem;
+        }
+
+        .option {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: #9C27B0;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .option:hover {
+            transform: scale(1.05);
+            background-color: #7B1FA2;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #redirect-message {
+            font-size: 1.5rem;
+            color: #3F51B5;
+            margin: 1rem;
+        }
+
+        #score {
+            font-size: 1.2rem;
+            color: #E91E63;
+            margin: 10px 0;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.2);
+            }
+        }
+
+        #maze-message {
+            font-size: 1.2rem;
+            color: #3F51B5;
+            min-height: 20px;
+            margin: 10px 0;
+        }

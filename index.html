@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Not Found (But Fun!)</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <h1>404 - Page Not Found</h1>
+    <p>But don't worry, we've got games!</p>
+    
+    <div class="options">
+        <div class="option" onclick="showMaze()">Maze Game</div>
+        <div class="option" onclick="showRunawayButton()">Runaway Button</div>
+        <div class="option" onclick="showRedirect()">Fake Redirect</div>
+    </div>
+    
+    <div id="maze-game" class="hidden">
+        <p>Help the green dot collect coins and reach the orange exit!</p>
+        <p>Use arrow keys to move</p>
+        <div id="score">Coins: 0</div>
+        <div id="maze-message"></div>
+        <div class="maze-container">
+            <div id="player"></div>
+            <div id="exit"></div>
+            <!-- Walls and coins will be added by JS -->
+        </div>
+    </div>
+    
+    <div id="runaway-btn-container" class="hidden">
+        <p>Try to click this button. I dare you.</p>
+        <button class="runaway-btn" onmouseover="moveButton(this)">Click Me!</button>
+    </div>
+    
+    <div id="redirect-container" class="hidden">
+        <p id="redirect-message">Redirecting to homepage...</p>
+        <div class="progress-bar" style="width: 100%; height: 20px; background-color: #ddd;">
+            <div id="progress" style="width: 0%; height: 100%; background-color: #4CAF50;"></div>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
